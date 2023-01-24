@@ -1,0 +1,61 @@
+.aside {
+    grid-area: aside;
+    padding-top: 51px;
+    padding-bottom: 64px;
+    display: grid;
+    grid-template-areas: 
+        "aside__top"
+        "aside__footer";
+    &__top {
+        grid-area: aside__top;
+    }
+    &__footer {
+        grid-area: aside__footer;
+        display: grid;
+        grid-template-columns: 48px 86px;
+        align-items: end;
+        column-gap: 17px;
+        cursor: pointer;
+    }
+    &__logo {
+        margin-bottom: 57px;
+    }
+    &__title {
+        margin-bottom: 44px;
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 47px;
+    }
+    &__item {
+        margin-bottom: 24px;
+        display: grid;
+        grid-template-columns: 22px 93px;
+        column-gap: 12px;
+    }
+    &__icon {
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__chat {
+        width: 48px;
+        height: 48px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        &-name{
+            transform: translateY(-50%);
+        }
+    }
+    &__descr {
+        a{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            @include link;
+        }
+        
+    }
+}

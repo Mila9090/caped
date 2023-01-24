@@ -1,0 +1,52 @@
+@import './libs/bootstrap-reboot.min';
+@import './libs/_fonts.scss';
+@import './base/mixins';
+@import './base/medias';
+
+@import './blocks/_aside.scss';
+@import './blocks/_header.scss';
+@import './blocks/_menu.scss';
+@import './blocks/_main.scss';
+
+
+@import './base/medias';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sofia', sans-serif;
+}
+
+.container {
+    width: 95%;
+    display: grid;
+    grid-template-areas: 
+        "aside wrapper"
+        "aside wrapper";
+    grid-template-columns: 14% 1fr;
+    grid-template-rows: 100vh;
+    column-gap: 37px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    padding-top: 48px;
+    padding-bottom: 64px;
+    grid-area: wrapper;
+    display: grid;
+    grid-template-areas: 
+        "headerr"
+        "main";
+    grid-template-columns: 1fr;
+    grid-template-rows: 31px 1fr;
+    row-gap: 66px;
+}
+
+.footer {
+    display: none;
+}
+
+.red {
+    background-color: rgb(116, 23, 23);
+}

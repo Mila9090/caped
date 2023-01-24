@@ -1,0 +1,83 @@
+.main {
+    display: grid;
+    grid-template-areas: 
+        "first second"
+        "third fourth";
+    gap: 21px;
+    .first {
+        grid-area: first;
+    }
+    .second {
+        grid-area: second;
+    }
+    .third {
+        grid-area: third;
+    }
+    .fourth {
+        grid-area: fourth;
+    }
+    &__album {
+        min-width: 280px;
+        display: grid;
+        row-gap: 21px;
+    }
+    &__vertical {
+        min-width: 280px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(130px, 1fr));
+        column-gap: 21px;
+    }
+    &__get-up {
+        @include size;
+        background: url('./../img/get-up.png') center/cover no-repeat;
+    }
+    &__summer {
+        @include size;
+        background: url('./../img/summer.png') center/cover no-repeat;
+    }
+    &__pink {
+        @include size;
+        background: url('./../img/pink-hair.png') top/cover no-repeat;
+    }
+    &__brown {
+        @include size;
+        background: url('./../img/brown-hair.png') top/cover no-repeat;
+    }
+    &__kiss {
+        @include size;
+        background: url('./../img/kiss.png') top/cover no-repeat;
+    }
+    &__white {
+        @include size;
+        background: url('./../img/white-hair.png') top/cover no-repeat;
+    }
+    &__blue {
+        @include size;
+        background: url('./../img/blue-hair.png') center/cover no-repeat;
+    }
+    &__red {
+        @include size;
+        background: url('./../img/red-hair.png') center/cover no-repeat;
+    }
+    &__like {
+        width: 38px;
+        height: 38px;
+        background-color: #fff;
+        background-image: url('./../icons/like.png');
+        background-position: center;
+        background-size: auto;
+        background-repeat: no-repeat;
+        border-radius: 100%;
+        position: absolute;
+        left: 77%;
+        top: 5%;
+        cursor: pointer;
+            transition: 0.2s all;
+        &:hover {
+            transform: scale(1.1);
+        }
+        &_active {
+            background-image: url('./../icons/like-red.png');
+        }
+    }
+}
